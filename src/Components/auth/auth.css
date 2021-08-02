@@ -1,0 +1,163 @@
+/* -- PAGES -- */
+
+.auth__relativo {
+  margin-top: 5vh;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: 700;
+  /* margin-top: 15vh; */
+  text-align: center;
+}
+
+.logo > span {
+  color: var(--morado);
+}
+
+.logo > i {
+  color: var(--morado);
+}
+
+.mensajeAuth {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--rojo);
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding: 15px 5px;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .mensajeAuth {
+    width: 500px;
+    bottom: 50px;
+    right: auto;
+    left: 50%;
+    margin-left: -250px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .auth__relativo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+    margin-top: 20vh;
+  }
+
+  .logo {
+    font-size: 65px;
+  }
+}
+
+/* -- AUTH -- */
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.auth__h1 {
+  text-align: center;
+  color: var(--negro);
+}
+
+.auth__formGroup {
+  width: 100%;
+  margin-top: 40px;
+  border-bottom: solid 1px #e1e1e1;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.auth__formGroup > i {
+  color: var(--placeholder);
+  font-size: 18px;
+}
+
+.auth__input {
+  flex: 1;
+  border: none;
+  font-size: 16px;
+  outline-width: 0;
+}
+
+.auth__recuperarClave {
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.auth__recuperarClave > button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.auth__submit {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: var(--morado);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.auth__crearCuenta {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.formulario__error {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--rojo);
+  color: white;
+  border-radius: 10px;
+  padding: 8px 0;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .auth__form {
+    width: 700px;
+    padding: 20px;
+    border: solid 1px #e1e1e1;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+  }
+
+  .auth__recuperarClave > button:hover {
+    cursor: pointer;
+  }
+
+  .auth__submit {
+    transition: 0.2s ease;
+    outline-width: 0;
+  }
+
+  .auth__submit:hover {
+    cursor: pointer;
+    transition: 0.2s ease;
+    transform: translateY(-2px);
+  }
+}
