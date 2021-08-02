@@ -1,13 +1,13 @@
 /* -- PAGES -- */
 
 .auth__relativo {
-  margin-top: 5vh;
+  height: 100vh;
 }
 
 .logo {
   font-size: 50px;
   font-weight: 700;
-  /* margin-top: 15vh; */
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -41,18 +41,22 @@
     margin-left: -250px;
     border-radius: 10px;
   }
+
+  .logo {
+    margin-top: 20vh;
+  }
 }
 
 @media (min-width: 1200px) {
   .auth__relativo {
     display: grid;
-    grid-template-columns: repeat(2, auto);
     place-items: center;
-    margin-top: 20vh;
-  }
-
+    grid-template-columns: repeat(2, auto);
+  }  
+  
   .logo {
     font-size: 65px;
+    margin-top: 0;
   }
 }
 
@@ -61,10 +65,7 @@
 .auth__form {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 95%;
   padding: 10px;
-  margin-top: 30px;
 }
 
 .auth__h1 {
@@ -75,15 +76,16 @@
 .auth__formGroup {
   width: 100%;
   margin-top: 40px;
-  border-bottom: solid 1px #e1e1e1;
-  padding: 5px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  padding: 0 5px;
   display: flex;
   align-items: center;
 }
 
 .auth__formGroup > i {
-  color: var(--placeholder);
+  color: var(--negro);
   font-size: 18px;
+  margin-left: 5px;
 }
 
 .auth__input {
@@ -91,6 +93,12 @@
   border: none;
   font-size: 16px;
   outline-width: 0;
+  background-color: transparent;
+  height: 25px;
+}
+
+.auth__input::placeholder {
+  color: var(--negro);
 }
 
 .auth__recuperarClave {
@@ -103,6 +111,8 @@
   border: none;
   background-color: transparent;
   font-size: 16px;
+  color: var(--negro);
+  transition: 0.2s ease;
 }
 
 .auth__submit {
@@ -124,6 +134,8 @@
   text-decoration: none;
   color: black;
   font-size: 16px;
+  color: var(--negro);
+  transition: 0.2s ease;
 }
 
 .formulario__error {
@@ -141,13 +153,17 @@
   .auth__form {
     width: 700px;
     padding: 20px;
-    border: solid 1px #e1e1e1;
     border-radius: 10px;
     box-shadow: var(--sombra);
+    background: transparent;
+    margin: auto;
+    margin-top: 30px;
   }
 
   .auth__recuperarClave > button:hover {
     cursor: pointer;
+    transition: 0.2s ease;
+    color: black;
   }
 
   .auth__submit {
@@ -155,9 +171,20 @@
     outline-width: 0;
   }
 
+  .auth__crearCuenta:hover {
+    transition: 0.2s ease;
+    color: black;
+  }
+
   .auth__submit:hover {
     cursor: pointer;
     transition: 0.2s ease;
-    transform: translateY(-2px);
+    box-shadow: 0px 0px 3px 0.5px var(--morado);
+  }
+}
+
+@media (min-width: 1200px) {
+  .auth__form {
+    margin: auto;
   }
 }

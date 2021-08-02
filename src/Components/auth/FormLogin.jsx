@@ -1,25 +1,12 @@
-import { useState } from "react";
+import useAuth from "../../Hooks/auth/useAuth";
 import FormGroup from "./FormGroup";
 
 const Form = () => {
-  const [formulario, setFormulario] = useState({
-    correo: "",
-    password: "",
-  });
-
-  const handleOnChange = (name, value) => {
-    setFormulario({
-      ...formulario,
-      [name]: value,
-    });
-  };
-
-  const submit = (e) => {
-    e.preventDefault();
-  };
+  
+  const { handleOnChange, submitLogin } = useAuth();
 
   return (
-    <form className="auth__form" onSubmit={submit}>
+    <form className="auth__form" onSubmit={submitLogin}>
       <h1 className="auth__h1">Iniciar Sesión</h1>
 
       <FormGroup

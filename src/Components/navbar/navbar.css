@@ -1,0 +1,190 @@
+.navbar__contenedor {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #e1e1e1;
+}
+
+.navbar__titulo {
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 20px;
+  color: #383838;
+}
+
+.navbar__titulo > span {
+  color: var(--morado);
+}
+
+.navbar__titulo > i {
+  color: var(--morado);
+}
+
+.navbar__contenedorBotones {
+  margin-right: 20px;
+}
+
+.navbar__navbarBoton {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: var(--negro);
+  border: solid 1px var(--negro);
+  outline-width: 0;
+}
+
+.navbar__navbarBoton:first-child {
+  margin-right: 10px;
+}
+
+.navbar__navbarBoton > i {
+  font-size: 16px;
+}
+
+.navbar__navbarBoton-activo {
+  color: var(--morado);
+  box-shadow: var(--sombra);
+  border: solid 1px var(--morado);
+}
+
+.navbarListaAmigos__noAmigos {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* -- CONFIGURACION -- */
+
+.navbarConfiguracion__contenedor {
+  position: absolute;
+  width: 95%;
+  border-radius: 10px;
+  border: solid 1px #e1e1e1;
+  top: 90px;
+  left: 10px;
+  box-shadow: var(--sombra);
+  padding: 0 10px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+.navbarConfiguracion__cerrarSesion {
+  background-color: var(--rojo);
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 5px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.navbar__sesion {
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .navbar__titulo {
+    margin-left: 50px;
+    font-size: 30px;
+  }
+
+  .navbar__sesion {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+  }
+
+  .navbar__sesion > p {
+    font-weight: 700;
+    color: var(--negro);
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .navbar__sesion > button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: transparent;
+    font-size: 18px;
+    border: solid 1px #b4b3b3;
+    color: var(--negro);
+    font-weight: 700;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .navbar__sesion > button:hover {
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+    color: white;
+    border-color: transparent;
+    background-color: #b4b3b3;
+  }
+
+  .navbarConfiguracion__cerrarSesion {
+    margin: 0;
+    margin-right: 50px;
+  }
+
+  .navbarConfiguracion__contenedor {
+    display: none;
+  }
+
+  .navbar__contenedorBotones {
+    display: none;
+  }
+}
+
+/* -- LISTA AMIGOS MOBILE -- */ 
+
+.listaAmigos__contenedor {
+  position: absolute;
+  width: 95%;
+  height: 88vh;
+  border-radius: 10px;
+  border: solid 1px #e1e1e1;
+  top: 90px;
+  left: 10px;
+  box-shadow: var(--sombra);
+  padding: 0 10px;
+  overflow: scroll;
+  z-index: 2;
+  background-color: white;
+}
+
+.listaAmigos__p {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #383838;
+}
+
+.botonAgregar {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  border: none;
+  border-top: solid 1px #e1e1e1;
+  height: 50px;
+  font-size: 18px;
+  color: var(--negro);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.botonAgregar > p {
+  margin-right: 10px;
+}

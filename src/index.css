@@ -16,3 +16,7 @@
   --rojo: #d63434;
   --verde: rgb(38, 161, 38);
 }
+
+.d-none {
+  display: none
+}

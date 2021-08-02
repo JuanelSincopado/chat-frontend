@@ -1,55 +1,12 @@
-import { useContext, useState } from "react";
-import AuthContext from "../../Context/authContext/AuthContext";
+import useAuth from "../../Hooks/auth/useAuth";
 import FormGroup from "./FormGroup";
 
 const FormRegistrar = () => {
-  const [formulario, setFormulario] = useState({
-    nombre: "",
-    correo: "",
-    password: "",
-    passwordRep: "",
-  });
 
-  const handleOnChange = (name, value) => {
-    setFormulario({
-      ...formulario,
-      [name]: value,
-    });
-  };
-
-  const { setError, registrarUsuario } = useContext(AuthContext);
-
-  const submit = (e) => {
-    e.preventDefault();
-
-    const { nombre, correo, password, passwordRep } = formulario;
-
-    if (
-      nombre.trim() === "" ||
-      correo.trim() === "" ||
-      password.trim() === "" ||
-      passwordRep.trim() === ""
-    ) {
-      setError("Los campos son obligatorios");
-      setTimeout(() => {
-        setError("");
-      }, 2000);
-      return;
-    }
-
-    if (password !== passwordRep) {
-      setError("Las contraseñas no coinciden");
-      setTimeout(() => {
-        setError("");
-      }, 2000);
-      return;
-    }
-
-    registrarUsuario({ nombre, correo, password });
-  };
+  const { handleOnChange, submitRegistrar } = useAuth();
 
   return (
-    <form className="auth__form" onSubmit={submit}>
+    <form className="auth__form" onSubmit={submitRegistrar}>
       <h1 className="auth__h1">Crear Cuenta</h1>
 
       <FormGroup

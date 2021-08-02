@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import MensajeAuth from "../Components/auth/MensajeAuth";
 import FormRegistrar from "../Components/auth/FormRegitrar";
 import Logo from "../Components/auth/Logo";
-import AuthContext from "../Context/authContext/AuthContext";
+import useAuth from "../Hooks/auth/useAuth";
 
 const Registrar = () => {
-  const { error, mensaje } = useContext(AuthContext);
+  const { error, mensaje } = useAuth();
 
   return (
     <div className="auth__relativo">

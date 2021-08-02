@@ -1,4 +1,5 @@
 import { useReducer, useState } from "react";
+import { useHistory } from "react-router-dom";
 import AuthContext from "./AuthContext";
 import AuthReducer from "./AuthReducer";
 
@@ -26,6 +27,8 @@ const AuthState = ({ children }) => {
   const [error, setError] = useState("");
 
   const [state, dispatch] = useReducer(AuthReducer, initialState);
+
+  const history = useHistory();
 
   const registrarUsuario = async (usuario) => {
     try {
@@ -58,6 +61,8 @@ const AuthState = ({ children }) => {
         type: OBTENER_USUARIO,
         payload: respuesta.data.usuario,
       });
+
+      history.push("/inicio");
     } catch (error) {
       console.log(error);
       dispatch({
@@ -66,29 +71,29 @@ const AuthState = ({ children }) => {
     }
   };
 
-  // const iniciarSesion = async (datos) => {
-  //   try {
-  //     const respuesta = await clienteAxios.post("auth", datos);
-  //     dispatch({
-  //       type: LOGIN_EXITOSO,
-  //       payload: respuesta.data,
-  //     });
+  const iniciarSesion = async (datos) => {
+    try {
+      const respuesta = await clienteAxios.post("auth", datos);
+      dispatch({
+        type: LOGIN_EXITOSO,
+        payload: respuesta.data,
+      });
 
-  //     usuarioAutenticado();
-  //   } catch (error) {
-  //     console.log(error.response.data.msg);
-  //     dispatch({
-  //       type: LOGIN_ERROR,
-  //       payload: error.response.data.msg,
-  //     });
-  //   }
-  // };
+      usuarioAutenticado();
+    } catch (error) {
+      console.log(error.response.data.msg);
+      dispatch({
+        type: LOGIN_ERROR,
+        payload: error.response.data.msg,
+      });
+    }
+  };
 
-  // const cerrarSesion = () => {
-  //   dispatch({
-  //     type: CERRAR_SESION,
-  //   });
-  // };
+  const cerrarSesion = () => {
+    dispatch({
+      type: CERRAR_SESION,
+    });
+  };
 
   return (
     <AuthContext.Provider
@@ -101,8 +106,8 @@ const AuthState = ({ children }) => {
         cargando: state.cargando,
         registrarUsuario,
         usuarioAutenticado,
-        // iniciarSesion,
-        // cerrarSesion,
+        iniciarSesion,
+        cerrarSesion,
         setError,
       }}
     >
