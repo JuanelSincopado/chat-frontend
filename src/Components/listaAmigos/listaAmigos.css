@@ -1,0 +1,103 @@
+/* -- LISTA AMIGOS MOBILE -- */ 
+.listaAmigosMobile__contenedor {
+  position: absolute;
+  width: 95%;
+  height: 88vh;
+  border-radius: 10px;
+  border: solid 1px #e1e1e1;
+  top: 90px;
+  left: 10px;
+  box-shadow: var(--sombra);
+  padding: 0 10px;
+  overflow: scroll;
+  z-index: 2;
+  background-color: white;
+}
+
+.listaAmigosMobile__p {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.botonAgregar {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  border: none;
+  border-top: solid 1px #e1e1e1;
+  height: 50px;
+  font-size: 18px;
+  color: var(--negro);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.botonAgregar > p {
+  margin-right: 10px;
+}
+
+/* -- TARJETA AMIGO -- */
+
+.tarjetaAmigo__contenedor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+  border-top: solid 1px #e1e1e1;
+}
+
+.tarjetaAmigo__contenedor:first-of-type {
+  border-top: none;
+}
+
+.tarjetaAmigo__contenedor > img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+}
+
+.tarjetaAmigo__informacion {
+  margin-left: 20px;
+}
+
+.tarjetaAmigo__nombre {
+  font-size: 18px;
+  font-weight: 700;
+  color: #383838;
+}
+
+.tarjetaAmigoBoton {
+  border: none;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 700;
+  color: white;
+  padding: 10px 6px;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.tarjetaAmigoBoton:last-child {
+  margin-left: 10px;
+}
+
+.tarjetaAmigoBoton-aceptar {
+  background-color: var(--verde);
+}
+
+.tarjetaAmigoBoton-rechazar {
+  background-color: var(--rojo);
+}
+
+@media (min-width: 850px) {
+  .tarjetaAmigo__contenedor:first-of-type {
+      margin-top: 30px;
+  }
+}

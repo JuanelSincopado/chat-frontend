@@ -73,19 +73,6 @@
   background-color: white;
 }
 
-.navbarConfiguracion__cerrarSesion {
-  background-color: var(--rojo);
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  padding: 10px 5px;
-  font-size: 16px;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  box-shadow: var(--sombra);
-}
-
 .navbar__sesion {
   display: none;
 }
@@ -109,28 +96,6 @@
     margin-right: 10px;
   }
 
-  .navbar__sesion > button {
-    border: none;
-    border-radius: 10px;
-    padding: 10px 5px;
-    background-color: transparent;
-    font-size: 18px;
-    border: solid 1px #b4b3b3;
-    color: var(--negro);
-    font-weight: 700;
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-
-  .navbar__sesion > button:hover {
-    border-radius: 10px;
-    transition: all 0.2s ease;
-    padding: 10px 5px;
-    color: white;
-    border-color: transparent;
-    background-color: #b4b3b3;
-  }
-
   .navbarConfiguracion__cerrarSesion {
     margin: 0;
     margin-right: 50px;
@@ -145,46 +110,41 @@
   }
 }
 
-/* -- LISTA AMIGOS MOBILE -- */ 
+/* -- BTN CERRAR SESION -- */
 
-.listaAmigos__contenedor {
-  position: absolute;
-  width: 95%;
-  height: 88vh;
-  border-radius: 10px;
-  border: solid 1px #e1e1e1;
-  top: 90px;
-  left: 10px;
-  box-shadow: var(--sombra);
-  padding: 0 10px;
-  overflow: scroll;
-  z-index: 2;
-  background-color: white;
-}
-
-.listaAmigos__p {
-  margin-top: 10px;
-  font-size: 25px;
-  font-weight: 700;
-  color: var(--negro);
-}
-
-.botonAgregar {
-  position: absolute;
-  bottom: 0;
-  width: 95%;
+.BtnCerrarSesion {
+  background-color: transparent;
+  margin: auto;
+  margin-top: 20px;
   border: none;
-  border-top: solid 1px #e1e1e1;
-  height: 50px;
-  font-size: 18px;
-  color: var(--negro);
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: solid 1px #b4b3b3;
+  border-radius: 10px;
+  font-size: 16px;
   font-weight: 700;
+  color: var(--negro);
+  display: block;
+  padding: 10px 20px;
 }
 
-.botonAgregar > p {
-  margin-right: 10px;
+@media (min-width: 850px) {
+  .BtnCerrarSesion {
+    background-color: transparent;
+    margin: auto;
+    border: none;
+    border: solid 1px #b4b3b3;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--negro);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .BtnCerrarSesion:hover {
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+    color: white;
+    border-color: transparent;
+    background-color: #b4b3b3;
+  }
 }
