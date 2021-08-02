@@ -20,3 +20,28 @@
 .d-none {
   display: none
 }
+
+/* -- BUSCADOR -- */
+
+.buscador__form {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.buscador__form > input {
+  flex: 1;
+  border: none;
+  border-bottom: solid 1px #e1e1e1;
+  font-size: 16px;
+  outline-width: 0;
+  height: 20px;
+  margin-right: 5px;
+  color: var(--placeholder);
+}
+
+.buscador__form > i {
+  color: var(--negro)
+}
+
